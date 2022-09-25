@@ -11,7 +11,7 @@ const Products = () => {
   useEffect(() => {
     fetch('/api/bags')
       .then((res) => res.clone().json())
-      .then((data) => data);
+      .then((data) => setProducts(data));
   }, []);
 
   return (
