@@ -1,8 +1,12 @@
 import express from 'express';
+// import cors from 'cors';
 import data from './data.js';
 
 const app = express();
-// test
+
+// app.use(cors());
+
+// get all bags
 app.get('/api/bags', (req, res) => {
   res.send(data);
 });

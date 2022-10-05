@@ -19,6 +19,9 @@ module.exports = {
         use: [
           {
             loader: 'file-loader',
+            options: {
+              name: '[path][name].[ext]',
+            },
           },
         ],
       },
@@ -40,9 +43,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src/index.html"),
     }),
+    
   ],
   devServer: {
-    historyApiFallback: true,
+    proxy: {
+      '/api': 'http://localhost:5000',
+    },
+
   },
   devtool: "eval-source-map",
 };

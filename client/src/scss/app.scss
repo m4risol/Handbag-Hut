@@ -20,3 +20,12 @@ html, body {
         color: rgb(161, 161, 161);
     }
 }
+
+@media screen and (max-width: 900px) {
+    .hh-link {
+      display: none;
+    }
+    .menu-icon {
+        display: flex!important;
+    }
+}

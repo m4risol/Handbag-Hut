@@ -17,7 +17,7 @@ const Footer = () => {
             <ul className="list-unstyled">
               <Form.Label className="text-white">SHOP</Form.Label>
               {MAIN_LINKS.map((items, id) => (
-                <li>
+                <li key={id}>
                   <Link
                     to={items.route}
                     className="text-decoration-none text-secondary"
@@ -33,7 +33,7 @@ const Footer = () => {
             <ul className="list-unstyled">
               <Form.Label className="text-white">EXPLORE</Form.Label>
               {EXPLORE_LINKS.map((items, id) => (
-                <li>
+                <li key={id}>
                   <Link
                     to="/"
                     className="text-decoration-none text-secondary"
