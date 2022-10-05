@@ -40,6 +40,7 @@ export const getProducts = () => async (dispatch) => {
     const data = await response.json();
     console.log(data)
     dispatch(fetched(data));
+    console.log(data)
 
 	} catch (error) {
 		dispatch(failure());
