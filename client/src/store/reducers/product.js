@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
- const slice = createSlice({
-  name: "products",
+const slice = createSlice({
+  name: "product",
   initialState: {
     action: null,
     data: null,
@@ -15,10 +15,10 @@ import { createSlice } from "@reduxjs/toolkit";
       state.success = null;
     },
     fetched: (state, { type, payload }) => {
-      state.data = payload.data;
+      state.data = payload;
       state.action = type;
-      state.error = payload.error;
-      state.success = payload.success;
+      state.error = null;
+      state.success = true;
     },
     failure: (state, { type, payload }) => {
       state.action = type;
@@ -32,14 +32,13 @@ const { fetching, fetched, failure } = slice.actions;
 
 export default slice.reducer;
 
-export const getProducts = () => async (dispatch) => {
+export const getProduct = (id) => async (dispatch) => {
   try {
     dispatch(fetching());
-
-    const response = await fetch('/api/bags');
+    const response = await fetch(`/api/bags/${id}`);
     const data = await response.json();
 
-    dispatch(fetched({ data }));
+    dispatch(fetched(data));
   } catch (error) {
     dispatch(failure());
   }

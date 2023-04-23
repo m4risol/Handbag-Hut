@@ -2,20 +2,18 @@ import React, { useEffect, useState } from "react";
 import { Form, Image, Row, Col } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "@store/reducers";
-//import { data } from "@constants";
-//import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
- // const navigate = useNavigate();
+ const navigate = useNavigate();
  const dispatch = useDispatch();
+
  const products = useSelector((state) => state.products);
  const { data } = products;
-  //const [products, setProducts] = useState([]);
 
   useEffect(() => {
     dispatch(getProducts())
-    console.log(data)
-  }, []);
+  }, [dispatch]);
 
   return (
     <React.Fragment>
@@ -27,13 +25,14 @@ const Products = () => {
               style={{ width: "300px", cursor: "pointer" }}
               className=""
               onClick={() => {
-                navigate(`/product/${items._id}`);
+                navigate(`/bags/${items.id}`);
               }}
             />
             <Form.Label className="">{items.name}</Form.Label>
             <Form.Label className="">${items.price}</Form.Label>
           </Col>
-        ))}
+        )
+        )}
       </Row>
     </React.Fragment>
   );

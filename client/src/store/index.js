@@ -1,15 +1,18 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-import { logger } from 'redux-logger';
-import { products } from "./reducers";
+import { logger } from "redux-logger";
+import { products, product, cart } from "./reducers";
 
-export const store = configureStore({
-  reducer: {
-    products,
-  },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: false,
-    }).concat(logger),
-});
+const reducer = {
+  products,
+  product,
+  cart
+};
+
+let middleware = () =>
+  getDefaultMiddleware({
+    serializableCheck: false,
+  }).concat(logger);
+
+const store = configureStore({ reducer, middleware });
 
 export default store;

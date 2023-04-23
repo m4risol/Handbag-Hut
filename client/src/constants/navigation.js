@@ -27,6 +27,10 @@ export const MAIN_LINKS = [
     name: "Bucket Bags",
     route: "/bags/bucket-bags",
   },
+  {
+    name: "Cart",
+    route: '/cart'
+  }
 ];
 
 export const EXPLORE_LINKS = [

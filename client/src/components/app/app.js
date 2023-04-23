@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Layout } from "@components/core";
+import { Layout, Cart } from "@components/core";
 import { Home, Product } from '@components';
 
 const App = () => {
@@ -9,9 +9,8 @@ const App = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/new" element={<Category/>}/> */}
-           {/* <Route path="/bags" element={<Category/>}/> */}
-          <Route path="/product/:id" element={<Product />} />
+          <Route path="/cart" element={<Cart/>}/>
+          <Route path="/bags/:id" element={<Product />} />
         </Routes>
       </Layout>
     </BrowserRouter>
