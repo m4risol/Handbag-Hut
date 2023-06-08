@@ -1,5 +1,9 @@
 # Handbag-Hut
 
+```
+A purse ecommerce shop using the MERN stack (Mongodb, Express.js, React.js, and Node.js)
+```
+
 ## setup app
 
 ```
