@@ -1,11 +1,13 @@
 # Handbag-Hut
 
-starting the app:
+## setup app
 
-cd client
-yarn start
+```
+git clone https://github.com/m4risol/handbag-hut.git
+yarn install
+```
 
-starting the backend:
+## start app
 
-cd server
-yarn start
+-   yarn start in 'client' folder
+-   yarn start in 'server' folder 
