@@ -3,7 +3,7 @@
 ## setup app
 
 ```
-git clone https://github.com/m4risol/handbag-hut.git
+git clone https://github.com/m4risol/Handbag-Hut.git
 yarn install
 ```
 
