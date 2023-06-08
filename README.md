@@ -6,10 +6,8 @@ A purse ecommerce shop using the MERN stack (Mongodb, Express.js, React.js, and 
 
 ## setup app
 
-```
-git clone https://github.com/m4risol/Handbag-Hut.git
-yarn install
-```
+-  git clone https://github.com/m4risol/Handbag-Hut.git
+-  yarn install
 
 ## start app
 
