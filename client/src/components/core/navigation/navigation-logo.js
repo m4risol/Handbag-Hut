@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Image } from "react-bootstrap";
 import { Logo } from "@assets/images";
-import { BsHandbag } from "react-icons/bs";
 import { AiOutlineMenu } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 
@@ -22,7 +21,6 @@ const NavigationLogo = () => {
             navigate("/");
           }}
         />
-        <BsHandbag style={{ fontSize: "30px" }} />
         <AiOutlineMenu
           className="menu-icon"
           style={{ fontSize: "30px", display: "none" }}

@@ -22,14 +22,6 @@ export const MAIN_LINKS = [
   {
     name: "Backpacks",
     route: "/bags/backpacks",
-  },
-  {
-    name: "Bucket Bags",
-    route: "/bags/bucket-bags",
-  },
-  {
-    name: "Cart",
-    route: '/cart'
   }
 ];
 

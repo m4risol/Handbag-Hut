@@ -7,3 +7,8 @@ export { default as Purse3 } from './purse3.jpeg';
 export { default as Purse4 } from './purse4.jpeg';
 export { default as Purse5 } from './purse5.jpeg';
 export { default as Purse6 } from './purse6.jpeg';
+export { default as Girl1 } from './girl1.png';
+export { default as Girl2 } from './girl2.png';
+export { default as Girl3 } from './girl3.png';
+export { default as Girl4 } from './girl4.png';
+export { default as Purses } from './purses.png';

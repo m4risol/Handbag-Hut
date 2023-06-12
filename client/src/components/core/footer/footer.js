@@ -2,7 +2,8 @@ import React from "react";
 import { Container, Col, Row, Image, Form, Button } from "react-bootstrap";
 import { LogoWhite } from "@assets/images";
 import { MAIN_LINKS, EXPLORE_LINKS } from "@constants";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import { AiFillInstagram, AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -10,7 +11,12 @@ const Footer = () => {
       <Container fluid className="footer" style={{ backgroundColor: "black" }}>
         <Row className="p-5">
           <Col>
-            <Image src={LogoWhite} alt="logo-white" width="200px"/>
+            <Image src={LogoWhite} alt="logo-white" width="200px" />
+            <Container className="mt-4 d-flex gap-3">
+              <AiFillInstagram style={{ color: "white" }} size={30} />
+              <AiFillFacebook style={{ color: "white" }} size={30}/>
+              <AiFillTwitterSquare style={{ color: "white" }} size={30}/>
+            </Container>
           </Col>
           <Col>
             {/* <Link key={id} to={items.route} className="hh-link text-decoration-none text-dark mx-4 my-3">{items.name.toUpperCase()}</Link> */}
@@ -49,7 +55,10 @@ const Footer = () => {
             <Form.Label className="text-white">
               SUBSCRIBE FOR DISCOUNTS
             </Form.Label>
-            <Form.Control placeholder="Enter Email Address" style={{borderRadius: '0px'}}></Form.Control>
+            <Form.Control
+              placeholder="Enter Email Address"
+              style={{ borderRadius: "0px" }}
+            ></Form.Control>
             <Button
               className="hh-button mt-3"
               style={{
