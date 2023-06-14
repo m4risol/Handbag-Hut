@@ -3,7 +3,7 @@ import { Form, Image, Row, Col, Button, Container } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getProduct, addToCart } from "@store/reducers";
-import { Loader } from '@components/core';
+import { Loader } from "@components/core";
 
 const Product = () => {
   const params = useParams();
@@ -27,21 +27,25 @@ const Product = () => {
   }, [product]);
 
   return (
-    <Container>
+    <Container className="p-5">
       {isLoading ? (
         <Loader />
       ) : (
         <Row className="d-flex justify-content-center align-items-center flex-wrap">
-          <Col xs={6}>
+          <Col className="d-flex justify-content-center">
             <Image
               src={`/src/assets/images/${data?.image}`}
               style={{ width: "300px" }}
             />
           </Col>
           <Col className="d-flex flex-column" xs={6}>
-            <Form.Label>{data?.name}</Form.Label>
+            <Form.Label className="h3">{data?.name}</Form.Label>
             <Form.Label>${data?.price}</Form.Label>
-            <Form.Label>Description: {data?.description}</Form.Label>
+            <Form.Label>QTY:</Form.Label>
+            <Form.Control type="number" />
+            <Form.Label>Description:</Form.Label>
+            <Form.Label>{data?.description}</Form.Label>
+
             <Button
               onClick={() => {
                 dispatch(addToCart(data));

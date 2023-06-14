@@ -18,10 +18,6 @@ export const MAIN_LINKS = [
   {
     name: "Tote Bags",
     route: "/bags/tote-bags",
-  },
-  {
-    name: "Backpacks",
-    route: "/bags/backpacks",
   }
 ];
 

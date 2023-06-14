@@ -3,7 +3,11 @@ import { Container, Col, Row, Image, Form, Button } from "react-bootstrap";
 import { LogoWhite } from "@assets/images";
 import { MAIN_LINKS, EXPLORE_LINKS } from "@constants";
 import { Link } from "react-router-dom";
-import { AiFillInstagram, AiFillFacebook, AiFillTwitterSquare } from "react-icons/ai";
+import {
+  AiFillInstagram,
+  AiFillFacebook,
+  AiFillTwitterSquare,
+} from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -14,8 +18,8 @@ const Footer = () => {
             <Image src={LogoWhite} alt="logo-white" width="200px" />
             <Container className="mt-4 d-flex gap-3">
               <AiFillInstagram style={{ color: "white" }} size={30} />
-              <AiFillFacebook style={{ color: "white" }} size={30}/>
-              <AiFillTwitterSquare style={{ color: "white" }} size={30}/>
+              <AiFillFacebook style={{ color: "white" }} size={30} />
+              <AiFillTwitterSquare style={{ color: "white" }} size={30} />
             </Container>
           </Col>
           <Col>
