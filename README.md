@@ -12,4 +12,6 @@ A purse ecommerce shop using the MERN stack (Mongodb, Express.js, React.js, and 
 ## start app
 
 -   yarn start in 'client' folder
--   yarn start in 'server' folder 
+-   yarn start in 'server' folder
+
+STILL IN PROGRESS
