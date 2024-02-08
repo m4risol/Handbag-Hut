@@ -41,6 +41,6 @@ export const getProducts = () => async (dispatch) => {
 
     dispatch(fetched({ data }));
   } catch (error) {
-    dispatch(failure());
+    dispatch(failure({ error: "Failure!" }));
   }
 };

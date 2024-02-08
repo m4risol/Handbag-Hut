@@ -1,8 +1,8 @@
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin"); 
 
 module.exports = {
-  entry: path.resolve(__dirname, "./src/index.js"),
+  entry: path.resolve(__dirname, "src/index.js"),
   module: {
     rules: [
       {
@@ -18,9 +18,9 @@ module.exports = {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              name: '[path][name].[ext]',
+              name: "[path][name].[ext]",
             },
           },
         ],
@@ -28,7 +28,8 @@ module.exports = {
     ],
   },
   output: {
-    path: path.resolve(__dirname, "./dist"),
+    clean: true,
+    path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
   },
   resolve: {
@@ -36,20 +37,19 @@ module.exports = {
       "@components": path.resolve(__dirname, "src/components"),
       "@assets": path.resolve(__dirname, "src/assets"),
       "@store": path.resolve(__dirname, "src/store"),
-      "@constants": path.resolve(__dirname, "src/constants")
+      "@constants": path.resolve(__dirname, "src/constants"),
     },
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "src/index.html"),
     }),
-    
   ],
   devServer: {
     proxy: {
-      '/api': 'http://localhost:5000',
+      "/api": "http://localhost:5000",
     },
-
+    historyApiFallback: true,
   },
   devtool: "eval-source-map",
 };

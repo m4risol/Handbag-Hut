@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 import data from './data.js';
 
 const app = express();
@@ -18,6 +19,12 @@ app.get('/api/bags/:id', (req, res) => {
     res.status(404).send({ message: 'Product not found' });
   }
 });
+
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "/client/dist")));
+app.get("*", (req, res) =>
+  res.sendFile(path.join(__dirname, "/client/dist/index.html"))
+);
 
 const port = process.env.PORT || 5000;
 app.listen(port, () => {

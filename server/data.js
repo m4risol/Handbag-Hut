@@ -2,7 +2,7 @@ const data = [
   {
     id: 1,
     name: "Classic Icon Bag",
-    category: "tote",
+    category: "tote-bags",
     image: "purse1.jpeg",
     price: 30.00,
     rating: 4.5,
@@ -13,7 +13,7 @@ const data = [
   {
     id: 2,
     name: "Monica Bag",
-    category: "satchel",
+    category: "satchels",
     image: "purse2.jpeg",
     price: 20.00,
     rating: 4.2,
@@ -24,7 +24,7 @@ const data = [
   {
     id: 3,
     name: "City Moves Bag",
-    category: "satchel",
+    category: "satchels",
     image: "purse3.jpeg",
     price: 30.00,
     rating: 4.5,
@@ -35,7 +35,7 @@ const data = [
   {
     id: 4,
     name: "Beverly Hills Bag",
-    category: "satchel",
+    category: "satchels",
     image: "purse4.jpeg",
     price: 70.00,
     rating: 4.5,
@@ -45,7 +45,7 @@ const data = [
   {
     id: 5,
     name: "Miranda Bag",
-    category: "Cross Bodies",
+    category: "cross-bodies",
     image: "purse5.jpeg",
     price: 25.00,
     rating: 4.5,
@@ -57,7 +57,7 @@ const data = [
   {
     id: 6,
     name: "Luxe Edition Bag",
-    category: "tote",
+    category: "tote-bags",
     image: "purse6.jpeg",
     price: 70.00,
     rating: 4.5,
